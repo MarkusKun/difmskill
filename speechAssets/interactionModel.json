@@ -1,0 +1,79 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.PauseIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.ResumeIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "StartPlayIntent",
+      "samples": [
+        "Spiele {Channel}"
+      ],
+      "slots": [
+        {
+          "name": "Channel",
+          "type": "ChannelType",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "StartStreamIntent",
+      "samples": [
+        "Starte Wiedergabe"
+      ],
+      "slots": []
+    }
+  ],
+  "types": [
+    {
+      "name": "ChannelType",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "Vocal Trance",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Classic EuroDisco",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Nightcore",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "Classic EuroDance",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ]
+}
