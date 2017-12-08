@@ -1,68 +1,48 @@
 {
   "languageModel": {
     "types": [
-                                    
-                   
-      
-     
-                                  
-                   
-      
       {
         "name": "ChannelType",
         "values": [
-      
           {
-            "id": null,
-                   
-      
-     
+            "id": "VocalTrance",
             "name": {
               "value": "Vocal Trance",
               "synonyms": []
-     
-                                
-                  
-                          
-        
-                
-         
-                            
-                                
-                       
             }
-       
           },
           {
-                                  
-                  
-                           
-        
-                 
-     
-    
-            
-     
-                            
-                 
-         
-            "id": null,
+            "id": "ClassicEuroDisco",
             "name": {
               "value": "Classic EuroDisco",
               "synonyms": []
             }
           },
           {
-            "id": null,
+            "id": "NightCore",
             "name": {
               "value": "Nightcore",
               "synonyms": []
             }
           },
           {
-            "id": null,
+            "id": "ClassicEuroDance",
             "name": {
               "value": "Classic EuroDance",
+              "synonyms": []
+            }
+          },
+          {
+            "id": "LatinHouse",
+            "name": {
+              "value": "Latin House",
+              "synonyms": []
+            }
+          },
+          {
+            "id": "RussianClubHits",
+            "name": {
+              "value": "Russian Club Hits",
               "synonyms": []
             }
           }
@@ -101,15 +81,7 @@
             "name": "Channel",
             "type": "ChannelType"
           }
-         
         ]
-      },
-      {
-        "name": "StartStreamIntent",
-        "samples": [
-          "Starte Wiedergabe"
-        ],
-        "slots": []
       }
     ],
     "invocationName": "digitally imported"
