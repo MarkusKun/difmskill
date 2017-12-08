@@ -43,7 +43,7 @@ function getStreamInfo(streamName){
 
 const handlers = {
     'LaunchRequest': function () {
-        this.emit(':ask', 'Willkommen bei Digitally Imported. Um einen Sender zu starten, sage: Starte Channel - Beispielsweise: Starte Vocal Trance');
+        this.emit(':ask', 'Willkommen bei Digitally Imported. Um einen Sender zu starten, sage: Spiele Channel - Beispielsweise: Spiele Vocal Trance');
     },
     'AMAZON.PauseIntent': function () {
         this.response.audioPlayerStop();
@@ -65,9 +65,9 @@ const handlers = {
             channelName = channelSlot.value.toLowerCase();
         }
         const channelInfo = getStreamInfo(channelName);
-        var url = channelInfo.streamUrl;
-        var channelImageUrl = channelInfo.imageUrl;
-        var channelIcon = {
+        const url = channelInfo.streamUrl;
+        const channelImageUrl = channelInfo.imageUrl;
+        const channelIcon = {
           smallImageUrl : channelImageUrl,
           largeImageUrl : channelImageUrl
         };
@@ -82,11 +82,11 @@ const handlers = {
     },
     'StartStreamIntent': function () {
         
-        const speechOutput = 'Sage: Starte Channel - Beispielsweise: Starte Vocal Trance';
+        const speechOutput = 'Sage: Spiele Channel - Beispielsweise: Spiele Vocal Trance';
         this.emit(':ask', speechOutput);
     },
     'AMAZON.HelpIntent': function () {
-        const speechOutput = 'Sage: Starte Channel - Beispielsweise: Starte Vocal Trance';
+        const speechOutput = 'Sage: Spiele Channel - Beispielsweise: Spiele Vocal Trance';
         this.emit(':ask', speechOutput);
     },
     'AMAZON.CancelIntent': function () {
