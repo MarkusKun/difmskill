@@ -34,7 +34,8 @@ You need to get a stream URI; those are only given out to Premium Users.
 
 * Digitally Imported Stream URI on https that can be accessed from your Alexa device
 
-When you ask the Echo to start a stream, the final result is a Stream URI being sent from AVS to your Echo (from the Cloud). It then needs to be able to access this Stream URI and for security reasons, this URI has to be on https (valid certificate and everything).
+When you ask the Echo to start a stream, the final result is a Stream URI being sent from AVS to your Echo (from the Cloud). It then needs to be able to access this Stream URI and for security reasons, this URI has to be on https (valid certificate and everything). 
+You can get such a stream URI from Digitally Imported if you are a Premium Member; This option is under "Player Settings" and "Hardware Player Settings". I was successfull with quality "Excellent (128k AAC)" but other quality options might work, too (according to Amazon documentation).
 At the time of writing, Digitally Imported Stream URIs are given on http only. You can work around this by putting the URI into a playlist file and hosting this playlist file on https.
 If you have your own webspace with certificate, you can host it there.
 You can also put this playlist file onto S3 storage and create a https-URI for your Alexa.
@@ -63,6 +64,8 @@ Once the Lambda is saved and works without errors, you can copy the ARN from the
 
 You can test the skill from Amazon Dev Console by entering an utterance and checking the returned JSON. If there is a section "directives" with your stream URI in it, that's a good sign.
 The JSON in the "service request" is what is sent to the lambda, so you can copy this and use it as testcase in the Lambda.
+
+I've personally had a major bughunting-session with a stream not playing from my Echo although the same S3 URI worked from other players. This problem went away when I accessed the Metadata (under Properties) and corrected the "Content-Type" to "audio/x-mpegurl". It seems like Alexa Audio Players are a bit sensitive to that.
 
 4. Real Listening
 
